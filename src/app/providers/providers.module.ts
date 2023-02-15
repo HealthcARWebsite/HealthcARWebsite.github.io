@@ -6,6 +6,8 @@ import { ProviderListComponent } from './provider-list/provider-list.component';
 import { ProviderFooterComponent } from './provider-footer/provider-footer.component';
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
+import { HttpClientModule } from "@angular/common/http";
+import { MatTableModule } from "@angular/material/table";
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { MatIconModule } from "@angular/material/icon";
   imports: [
     CommonModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    MatTableModule
   ]
 })
 export class ProvidersModule { }

@@ -3,21 +3,18 @@
     "name": "Test Clinic",
     "description": "Pulse check 1, 2",
     "url": "https://www.walgreens.com/",
-    "zipcode": "72758",
-    "services": ["local_pharmacy", "medical_services"]
+    "zipCode": "72758"
   },
   {
     "name": "Bone Doctor",
     "description": "Dr. Skeleton Rattles",
     "url": "https://en.wikipedia.org/wiki/Skeleton",
-    "zipcode": "72703",
-    "services": ["endocrinology", "dentistry"]
+    "zipCode": "72703"
   },
   {
     "name": "Mental Health R Us",
     "description": "Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah",
     "url": "https://988lifeline.org/",
-    "zipcode": "72002",
-    "services": ["psychiatry"]
+    "zipCode": "72002"
   }
 ]

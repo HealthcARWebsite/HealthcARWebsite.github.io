@@ -5,5 +5,5 @@ export interface HealthcareProvider {
   description: string;
   url: string;
   zipCode: string;
-  services: HealthcareServices[];
+  // services: HealthcareServices[];
 }
