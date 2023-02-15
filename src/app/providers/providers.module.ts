@@ -4,7 +4,8 @@ import { ProvidersComponent } from './providers.component';
 import { ProviderSearchComponent } from './provider-search/provider-search.component';
 import { ProviderListComponent } from './provider-list/provider-list.component';
 import { ProviderFooterComponent } from './provider-footer/provider-footer.component';
-
+import { MatButtonModule } from "@angular/material/button";
+import { MatIconModule } from "@angular/material/icon";
 
 
 @NgModule({
@@ -15,7 +16,9 @@ import { ProviderFooterComponent } from './provider-footer/provider-footer.compo
     ProviderFooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class ProvidersModule { }
