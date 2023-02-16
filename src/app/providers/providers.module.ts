@@ -12,6 +12,7 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatSortModule } from "@angular/material/sort";
 import { MatInputModule } from "@angular/material/input";
+import { MatSelectModule } from "@angular/material/select";
 
 
 @NgModule({
@@ -30,7 +31,9 @@ import { MatInputModule } from "@angular/material/input";
     MatProgressSpinnerModule,
     MatPaginatorModule,
     MatSortModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule
   ]
 })
-export class ProvidersModule { }
+export class ProvidersModule {
+}

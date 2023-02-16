@@ -1,4 +1,4 @@
-import { HealthcareServices } from "./healthcare-services.enum";
+// import { HealthcareServices } from "./healthcare-services.enum";
 
 export interface HealthcareProvider {
   name: string;
@@ -6,4 +6,5 @@ export interface HealthcareProvider {
   url: string;
   zipCode: string;
   // services: HealthcareServices[];
+  // TODO: implement services property with ProviderList
 }

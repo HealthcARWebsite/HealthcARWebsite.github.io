@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./provider-footer.component.css']
 })
 export class ProviderFooterComponent {
-
+  // TODO: make selector for other language versions
 }

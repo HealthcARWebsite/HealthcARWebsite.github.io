@@ -1,4 +1,26 @@
-<mat-form-field>
-  <mat-label>Age</mat-label>
-  <input matInput>
-</mat-form-field>
+<div class="input-form">
+
+  <mat-form-field>
+    <mat-label>How old are you?</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>What is your Zip Code?</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field class="health-insurance-input">
+    <mat-label>Do you have Health Insurance?</mat-label>
+    <mat-select>
+      <mat-option value="yes">Yes</mat-option>
+      <mat-option value="no">No</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button class="search-button" mat-raised-button color="accent" type="button">
+    <strong>Search</strong>
+    <mat-icon aria-hidden="true">search</mat-icon>
+  </button>
+
+</div>

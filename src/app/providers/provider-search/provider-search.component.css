@@ -1,5 +1,13 @@
-:host {
+.input-form {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  gap: 1rem;
+}
+
+.health-insurance-input {
+  width: 18rem;
+}
+
+.search-button {
+  height: 2.5rem;
+  margin-top: .45rem;
 }

@@ -1,4 +1,5 @@
 .modal_buttons{
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
+  margin-top: .75rem;
 }
