@@ -8,6 +8,9 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { HttpClientModule } from "@angular/common/http";
 import { MatTableModule } from "@angular/material/table";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatSortModule } from "@angular/material/sort";
 
 
 @NgModule({
@@ -22,7 +25,10 @@ import { MatTableModule } from "@angular/material/table";
     MatButtonModule,
     MatIconModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule,
+    MatSortModule
   ]
 })
 export class ProvidersModule { }
