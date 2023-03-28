@@ -29,10 +29,9 @@ export class ContactUsComponent {
   }
 
   onSubmit(): void {
-    console.log(this.contactForm);
-    console.log(this.contactForm.valid, this.contactForm.value);
     if (this.contactForm.valid) {
       //TODO send post request
+      this.dialogRef.close();
     } else {
       this.snackBar.open('Invalid Form', 'Close', {
         duration: 3000
