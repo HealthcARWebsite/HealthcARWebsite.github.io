@@ -20,7 +20,6 @@ export class ProvidersService {
 
   contactUs(formData: ContactUsInterface): Observable<any> {
     const url = `${this.baseUrl}/providers/contact-us`
-    return this.http.post<any>(url, JSON.stringify(formData));
-    // return this.http.post<any>(url, formData);
+    return this.http.post<any>(url, formData);
   }
 }

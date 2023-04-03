@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
-import { MatDialogRef } from "@angular/material/dialog";
-import { ContactUsInterface } from "../../interfaces/contact-us-interface.interface";
-import { FormControl, FormGroup, Validators } from "@angular/forms";
-import { MatSnackBar } from "@angular/material/snack-bar";
-import { ProvidersService } from "../../providers.service";
-import { ContactUsFormInterface } from "../../interfaces/contact-us-form.interface";
+import {Component} from '@angular/core';
+import {MatDialogRef} from "@angular/material/dialog";
+import {ContactUsInterface} from "../../interfaces/contact-us-interface.interface";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {MatSnackBar} from "@angular/material/snack-bar";
+import {ProvidersService} from "../../providers.service";
+import {ContactUsFormInterface} from "../../interfaces/contact-us-form.interface";
 
 @Component({
   selector: 'app-contact-us',
@@ -32,11 +32,12 @@ export class ContactUsComponent {
 
   onSubmit(): void {
     if (this.contactForm.valid) {
-      console.log(this.contactForm.value);
       this.providersService.contactUs(this.contactForm.value as ContactUsInterface).subscribe({
-        // next: () => this.snackBar.open('Message Sent', 'Close', {duration: 3000}),
-        // error: () => this.snackBar.open('Message Failed', 'Close', {duration: 3000}),
-        complete: () => this.snackBar.open('Message Complete', 'Close', {duration: 3000})
+        error: (e) => {
+          console.error(e);
+          this.snackBar.open('Message Failed', 'Close', {duration: 3000});
+        },
+        complete: () => this.snackBar.open('Message Sent', 'Close', {duration: 3000})
       })
       this.dialogRef.close();
     } else {
