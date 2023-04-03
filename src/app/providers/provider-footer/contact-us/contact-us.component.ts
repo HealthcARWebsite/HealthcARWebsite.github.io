@@ -20,8 +20,6 @@ export class ContactUsComponent {
     message: new FormControl('', Validators.required)
   })
 
-  // protected data: ContactUsInterface = {name: '', email: '', phone: '', organization: '', message: ''}
-
   constructor(
     public dialogRef: MatDialogRef<ContactUsComponent>,
     private snackBar: MatSnackBar,
@@ -36,8 +34,9 @@ export class ContactUsComponent {
     if (this.contactForm.valid) {
       console.log(this.contactForm.value);
       this.providersService.contactUs(this.contactForm.value as ContactUsInterface).subscribe({
-        next: () => this.snackBar.open('Message Sent', 'Close', {duration: 3000}),
-        error: () => this.snackBar.open('Message Failed', 'Close', {duration: 3000})
+        // next: () => this.snackBar.open('Message Sent', 'Close', {duration: 3000}),
+        // error: () => this.snackBar.open('Message Failed', 'Close', {duration: 3000}),
+        complete: () => this.snackBar.open('Message Complete', 'Close', {duration: 3000})
       })
       this.dialogRef.close();
     } else {

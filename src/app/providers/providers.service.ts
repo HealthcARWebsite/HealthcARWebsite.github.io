@@ -8,6 +8,9 @@ import { ContactUsInterface } from "./interfaces/contact-us-interface.interface"
   providedIn: 'root'
 })
 export class ProvidersService {
+
+  private baseUrl = "https://fierce-bastion-74208.herokuapp.com";
+
   constructor(private http: HttpClient) {
   }
 
@@ -16,7 +19,8 @@ export class ProvidersService {
   }
 
   contactUs(formData: ContactUsInterface): Observable<any> {
-    //TODO add correct URL
-    return this.http.post<any>('fakeURL', JSON.stringify(formData));
+    const url = `${this.baseUrl}/providers/contact-us`
+    return this.http.post<any>(url, JSON.stringify(formData));
+    // return this.http.post<any>(url, formData);
   }
 }
