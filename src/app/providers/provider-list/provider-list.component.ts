@@ -16,7 +16,7 @@ export class ProviderListComponent {
   displayedColumns = ["name", "description", "url", "zipCode"];
 
   healthcareProvidersAsMatTableDataSource$: Observable<MatTableDataSource<HealthcareProvider>> =
-    this.providersService.healthcareProvider$.pipe(
+    this.providersService.healthcareProvider().pipe(
       map((providers) => {
         const dataSource = this.dataSource;
         dataSource.data = providers;
