@@ -1,24 +1,24 @@
-<div class="input-form">
+<div class="input-form" [formGroup]="providerSearchForm">
 
   <mat-form-field>
     <mat-label>How old are you?</mat-label>
-    <input matInput>
+    <input matInput type="text" maxlength="3" inputmode="numeric" formControlName="age">
   </mat-form-field>
 
   <mat-form-field>
     <mat-label>What is your Zip Code?</mat-label>
-    <input matInput>
+    <input matInput type="text" maxlength="5" inputmode="numeric" formControlName="zipCode">
   </mat-form-field>
 
   <mat-form-field class="health-insurance-input">
     <mat-label>Do you have Health Insurance?</mat-label>
-    <mat-select>
-      <mat-option value="yes">Yes</mat-option>
-      <mat-option value="no">No</mat-option>
+    <mat-select formControlName="hasHealthInsurance">
+      <mat-option value="true">Yes</mat-option>
+      <mat-option value="false">No</mat-option>
     </mat-select>
   </mat-form-field>
 
-  <button class="search-button" mat-raised-button color="accent" type="button">
+  <button class="search-button" mat-raised-button color="accent" type="button" (click)="onSearch()">
     <strong>Search</strong>
     <mat-icon aria-hidden="true">search</mat-icon>
   </button>
