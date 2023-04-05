@@ -4,7 +4,6 @@ import {ProviderSearchForm} from "../interfaces/provider-search-form.interface";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {ProvidersService} from "../providers.service";
 import {ProviderSearchInterface} from "../interfaces/provider-search-interface.interface";
-import {map} from "rxjs";
 
 @Component({
   selector: 'app-provider-search',
@@ -25,7 +24,7 @@ export class ProviderSearchComponent {
         Validators.min(71500),
         Validators.max(73000)
       ])),
-    hasHealthInsurance: new FormControl(false, Validators.required)
+    hasHealthInsurance: new FormControl<boolean | null>(null, Validators.required)
   })
 
   constructor(
@@ -33,10 +32,22 @@ export class ProviderSearchComponent {
     private providersService: ProvidersService) {
   }
 
+  ngOnInit() {
+    this.onChanges();
+  }
+
+  onChanges() {
+    this.providerSearchForm.valueChanges.subscribe((formData) => {
+      if (this.providerSearchForm.valid) {
+        this.providersService.isSearchFormValid = this.providerSearchForm.valid;
+        this.providersService.emailSearchResultsFormData = formData as ProviderSearchInterface;
+      }
+    })
+  }
+
   onSearch(): void {
     if (this.providerSearchForm.valid) {
-      console.log(this.providerSearchForm.value);
-      this.providersService.sendUpdate(this.providerSearchForm.value as ProviderSearchInterface);
+      this.providersService.updateHealthcareProviders(this.providerSearchForm.value as ProviderSearchInterface);
     } else {
       this.snackBar.open('Invalid Form', 'Close', {duration: 3000});
     }

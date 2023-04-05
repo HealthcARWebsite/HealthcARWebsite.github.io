@@ -13,21 +13,13 @@ import {MatSort} from "@angular/material/sort";
 })
 export class ProviderListComponent {
 
-  displayedColumns = ["name", "description", "url", "zipCode"];
-
+  displayedColumns = ["name", "description", "url", "zipcode"];
 
   healthcareProvidersAsMatTableDataSource$: Observable<MatTableDataSource<HealthcareProvider>> =
-    this.providersService.getUpdate(
-      //   {
-      //   "age": 46,
-      //   "zipCode": "72324",
-      //   "hasHealthInsurance": true
-      // }
-    ).pipe(
+    this.providersService.getHealthcareProviders().pipe(
       map((providers) => {
         const dataSource = this.dataSource;
         dataSource.data = providers;
-        console.log(dataSource)
         return dataSource;
       })
     );
@@ -36,14 +28,17 @@ export class ProviderListComponent {
 
   @ViewChild('scheduledOrdersPaginator') set paginator(pager: MatPaginator) {
     if (pager) {
+      // noinspection TypeScriptValidateTypes; strict TS doesn't complain but WebStorm does
       this.dataSource.paginator = pager;
     }
   };
 
   @ViewChild(MatSort) set sort(sorter: MatSort) {
-    if (sorter) this.dataSource.sort = sorter;
+    if (sorter) {
+      this.dataSource.sort = sorter;
+    }
   }
 
-  constructor(private providersService: ProvidersService) {
+  constructor(public providersService: ProvidersService) {
   }
 }

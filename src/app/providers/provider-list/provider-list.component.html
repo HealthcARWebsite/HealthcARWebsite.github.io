@@ -1,5 +1,5 @@
 <div class="mat-elevation-z8"
-  *ngIf="(healthcareProvidersAsMatTableDataSource$ | async) as healthcareProviderData; else elseBlock">
+     *ngIf="!providersService.isTableLoading && (healthcareProvidersAsMatTableDataSource$ | async) as healthcareProviderData; else elseBlock">
 
   <table mat-table class="providerTable" [dataSource]="healthcareProviderData" matSort>
 
@@ -18,9 +18,9 @@
       <td mat-cell *matCellDef="let element">{{ element.url }}</td>
     </ng-container>
 
-    <ng-container matColumnDef="zipCode">
+    <ng-container matColumnDef="zipcode">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>ZipCode</th>
-      <td mat-cell *matCellDef="let element">{{ element["zipCode"] }}</td>
+      <td mat-cell *matCellDef="let element">{{ element["zipcode"]}}</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -32,7 +32,8 @@
   <mat-paginator
     #scheduledOrdersPaginator
     class="providerTable"
-    [pageSizeOptions]="[5, 10, 25]"
+    [pageSize]="10"
+    [pageSizeOptions]="[10, 25, 50]"
     showFirstLastButtons
     aria-label="Select page of healthcare providers">
   </mat-paginator>

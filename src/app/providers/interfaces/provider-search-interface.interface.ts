@@ -1,5 +1,5 @@
 export interface ProviderSearchInterface {
   age: number;
-  zipCode: string;
+  zipcode: string;
   hasHealthInsurance: boolean;
 }

@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-import { MatDialogRef } from "@angular/material/dialog";
+import {Component} from '@angular/core';
+import {MatDialogRef} from "@angular/material/dialog";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {MatSnackBar} from "@angular/material/snack-bar";
+import {ProvidersService} from "../../providers.service";
 
 @Component({
   selector: 'app-email-results',
@@ -7,14 +10,40 @@ import { MatDialogRef } from "@angular/material/dialog";
   styleUrls: ['./email-results.component.css']
 })
 export class EmailResultsComponent {
-
-  protected email = ''
+  emailForm = new FormGroup({
+    email: new FormControl('',
+      Validators.compose([
+        Validators.email,
+        Validators.required
+      ]))
+  })
 
   constructor(
-    public dialogRef: MatDialogRef<EmailResultsComponent>) {
+    public dialogRef: MatDialogRef<EmailResultsComponent>,
+    private snackBar: MatSnackBar,
+    private providersService: ProvidersService) {
   }
 
   onNoClick(): void {
     this.dialogRef.close();
+  }
+
+  onSubmit(): void {
+    if (this.providersService.isSearchFormValid && this.emailForm.valid) {
+      this.providersService.emailSearchResults(this.emailForm.value as string).subscribe({
+        error: (e) => {
+          console.error(e);
+          this.snackBar.open('Message Failed', 'Close', {duration: 3000});
+        },
+        complete: () => this.snackBar.open('Message Sent', 'Close', {duration: 3000})
+      })
+      this.dialogRef.close();
+    } else if (!this.providersService.isSearchFormValid) {
+      this.snackBar.open('Invalid Search Terms', 'Close', {duration: 3000});
+    } else if (!this.emailForm.valid) {
+      this.snackBar.open('Invalid Email', 'Close', {duration: 3000});
+    } else {
+      this.snackBar.open('Invalid Form', 'Close', {duration: 3000});
+    }
   }
 }

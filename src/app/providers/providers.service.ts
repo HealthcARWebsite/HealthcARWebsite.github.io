@@ -1,69 +1,63 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {HealthcareProvider} from "./interfaces/healthcare-provider.interface";
-import {catchError, map, Observable, Subject} from "rxjs";
+import {BehaviorSubject, Observable} from "rxjs";
 import {ContactUsInterface} from "./interfaces/contact-us-interface.interface";
 import {ProviderSearchInterface} from "./interfaces/provider-search-interface.interface";
-import {MatTableDataSource} from "@angular/material/table";
+import {EmailSearchResultsInterface} from "./interfaces/email-results-interface.interface";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProvidersService {
 
-  private subjectName = new Subject<any>();
+  isTableLoading = false;
 
-  private baseUrl = "https://fierce-bastion-74208.herokuapp.com";
+  isSearchFormValid = false;
+
+  emailSearchResultsFormData = <EmailSearchResultsInterface>{};
+
+  #healthcareProviders = new BehaviorSubject<HealthcareProvider[]>([]);
+
+  #baseUrl = "https://fierce-bastion-74208.herokuapp.com";
 
   constructor(private http: HttpClient) {
   }
 
-  // getHealthcareProviders(formData: ProviderSearchInterface) {
-  //   const url = `${this.baseUrl}/providers/get-providers`
-  //   this.http.get<any>(url, {params: formData as any}).pipe(
-  //     map((providers) => {
-  //       const dataSource = this.dataSource;
-  //       dataSource.data = providers;
-  //       return dataSource;
-  //     })
-  //   );
-  // }
-
-  // sendUpdate(message: string) { //the component that wants to update something, calls this fn
-  //   this.subjectName.next({text: message}); //next() will feed the value in Subject
-  // }
-
-  getUpdate(): Observable<any> { //the receiver component calls this function
-    return this.subjectName.asObservable(); //it returns as an observable to which the receiver funtion will subscribe
+  getHealthcareProviders(): Observable<HealthcareProvider[]> {
+    return this.#healthcareProviders.asObservable();
   }
 
-  sendUpdate(formData: ProviderSearchInterface) {
-    const url = `${this.baseUrl}/providers/get-providers`
-    this.http.get<any>(url, {params: formData as any})
-      .pipe(
-        //if request fails then an empty array will be returned
-        //TODO potentially change this if Chris thinks it's a bad idea
-        catchError(_ => {
-          this.subjectName.next([])
-          console.log("there was error");
-          return [];
-        })
-      )
+  updateHealthcareProviders(formData: ProviderSearchInterface) {
+    this.isTableLoading = true;
+    const url = `${this.#baseUrl}/providers/get-providers`
+    // this.http.get<HealthcareProvider[]>('assets/mock-providers.json', {params: formData as any})
+    this.http.get<HealthcareProvider[]>(url, {params: formData as any})
       .subscribe({
-          next: response => this.subjectName.next(response),
-          error: e => console.error(e)
+          next: (result) => {
+            this.isTableLoading = false;
+            this.#healthcareProviders.next(result)
+          },
+          error: (e) => {
+            this.isTableLoading = false;
+            // pass empty array if there's an error
+            this.#healthcareProviders.next([])
+            console.error(e)
+          }
         }
       )
   }
 
-  // healthcareProviders(formData?: ProviderSearchInterface): Observable<HealthcareProvider[]> {
-  //   const url = `${this.baseUrl}/providers/get-providers`
-  //   return this.http.get<any>(url, {params: formData as any});
-  //   // return this.http.get<HealthcareProvider[]>('assets/mock-providers.json');
-  // }
-
   contactUs(formData: ContactUsInterface): Observable<any> {
-    const url = `${this.baseUrl}/providers/contact-us`
+    const url = `${this.#baseUrl}/providers/contact-us`
     return this.http.post<any>(url, formData);
+  }
+
+  emailSearchResults(formData: string): Observable<any> {
+    const url = `${this.#baseUrl}/providers/email`
+    this.emailSearchResultsFormData.emailAddress = formData
+    // return this.http.post<any>(url,  {'zipcode':'72555', 'emailAddress':'minori6kaemon@gmail.com'});
+    // return this.http.post<any>(url,  JSON.stringify({'zipcode':'72555', 'emailAddress':'minori6kaemon@gmail.com'}));
+    return this.http.post<any>(url, this.emailSearchResultsFormData);
   }
 }

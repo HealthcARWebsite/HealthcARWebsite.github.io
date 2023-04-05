@@ -4,14 +4,14 @@
   <p class="explanation">If you'd like a copy of these resources please enter your email below.</p>
 </div>
 
-<div mat-dialog-content>
+<div mat-dialog-content [formGroup]="emailForm">
   <mat-form-field appearance="fill">
     <mat-label>Email</mat-label>
-    <input matInput [(ngModel)]="email">
+    <input matInput type="text" inputmode="email" required formControlName="email">
   </mat-form-field>
 </div>
 
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Send</button>
+  <button mat-button (click)="onSubmit()" cdkFocusInitial>Send</button>
 </div>
