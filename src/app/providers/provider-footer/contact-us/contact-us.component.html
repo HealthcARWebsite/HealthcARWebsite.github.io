@@ -1,29 +1,29 @@
-<h1 mat-dialog-title>Contact Us</h1>
+<h1 mat-dialog-title i18n="form header|Title text for form to message website administrator">Contact Us</h1>
 <div mat-dialog-content [formGroup]="contactForm">
 
   <mat-form-field appearance="fill">
-    <mat-label>Name</mat-label>
+    <mat-label i18n="input field|User's name">Name</mat-label>
     <input matInput formControlName="name">
   </mat-form-field>
 
   <mat-form-field appearance="fill">
-    <mat-label>Email</mat-label>
+    <mat-label i18n="input field|User's email address">Email</mat-label>
     <input matInput type="text" inputmode="email" formControlName="email">
   </mat-form-field>
 
   <mat-form-field appearance="fill">
-    <mat-label>Phone Number</mat-label>
+    <mat-label i18n="input field|User's phone number">Phone Number</mat-label>
     <input matInput type="text" inputmode="tel" formControlName="phone">
   </mat-form-field>
 
   <mat-form-field appearance="fill">
-    <mat-label>Organization</mat-label>
+    <mat-label i18n="input field|The organization the user represents">Organization</mat-label>
     <input matInput formControlName="organization">
   </mat-form-field>
 
   <mat-form-field appearance="fill">
-    <mat-label>Message</mat-label>
-    <textarea matInput formControlName="message" cdkTextareaAutosize></textarea>
+    <mat-label i18n="input field|User's message for website administrator">Message</mat-label>
+    <textarea matInput formControlName="message"></textarea>
   </mat-form-field>
 
 </div>

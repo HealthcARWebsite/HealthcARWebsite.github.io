@@ -1,6 +1,6 @@
 <main>
   <div class="content">
-    <img ngSrc="assets/logo.png" width="590" height="135" priority alt="HealthcAR Logo">
+    <img ngSrc="assets/logo.png" width="590" height="135" priority alt="HealthcAR Logo" i18n-alt>
     <section class="language-buttons">
       <button mat-raised-button color="primary" type="button" (click)="goToProviders('en')">
         English (EN)
@@ -15,8 +15,10 @@
         <mat-icon aria-hidden="true">language</mat-icon>
       </button>
     </section>
-    <span class="splash-description">We are an <strong>Arkansas based</strong> healthcare database. Our goal is to provide users with <strong>free and
+    <span i18n="website/org description|Splash screen description" class="splash-description">
+      We are an <strong>Arkansas based</strong> healthcare database. Our goal is to provide users with <strong>free and
       low-cost</strong> resources for healthcare information and services. We value <strong>patient privacy</strong> and
-      collect zero data on patient needs or demographics. </span>
+      collect zero data on patient needs or demographics.
+    </span>
   </div>
 </main>

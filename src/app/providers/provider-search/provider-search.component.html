@@ -1,6 +1,6 @@
-<button class="new-search-button" mat-raised-button color="accent" type="button" *ngIf="isCollapsed; else isVisible"
-        (click)="isCollapsed=false">
-  <strong>New Search</strong>
+<button i18n="new search button|Allows user to re-enter data and perform another search" class="new-search-button"
+        mat-raised-button color="accent" type="button" *ngIf="isCollapsed; else isVisible" (click)="isCollapsed=false">
+  New Search
   <mat-icon aria-hidden="true">search</mat-icon>
 </button>
 
@@ -8,26 +8,27 @@
   <div class="input-form" [formGroup]="providerSearchForm">
 
     <mat-form-field>
-      <mat-label>How old are you?</mat-label>
+      <mat-label i18n="input field|Ask for user's age">How old are you?</mat-label>
       <input matInput type="text" maxlength="3" inputmode="numeric" required formControlName="age">
     </mat-form-field>
 
     <mat-form-field>
-      <mat-label>What is your Zip Code?</mat-label>
+      <mat-label i18n="input field|Ask for user's zip code">What is your Zip Code?</mat-label>
       <input matInput type="text" maxlength="5" inputmode="numeric" required formControlName="zipCode">
       <mat-error *ngIf="!providerSearchForm.errors?.['zipCode']">Arkansas Zip Codes Only</mat-error>
     </mat-form-field>
 
     <mat-form-field class="health-insurance-input">
-      <mat-label>Do you have Health Insurance?</mat-label>
+      <mat-label i18n="input field|Ask whether user has health insurance">Do you have Health Insurance?</mat-label>
       <mat-select formControlName="hasHealthInsurance">
         <mat-option value="true">Yes</mat-option>
         <mat-option value="false">No</mat-option>
       </mat-select>
     </mat-form-field>
 
-    <button class="search-button" mat-raised-button color="accent" type="button" (click)="onSearch()">
-      <strong>Search</strong>
+    <button i18n="search button|Search for results that match data entered in form" class="search-button"
+            mat-raised-button color="accent" type="button" (click)="onSearch()">
+      Search
       <mat-icon aria-hidden="true">search</mat-icon>
     </button>
 
