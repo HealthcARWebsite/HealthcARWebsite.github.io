@@ -20,11 +20,11 @@ main {
       display: flex;
       justify-content: space-around;
 
-      button{
+      button {
         display: flex;
         flex-direction: row-reverse;
 
-        mat-icon{
+        mat-icon {
           display: inline;
           margin-left: .25rem !important;
           margin-right: 0 !important;
@@ -32,11 +32,26 @@ main {
       }
     }
 
-    .splash-description{
+    .splash-description {
       width: 75%;
       display: block;
       text-align: center;
-      color:#55602c
+      color: #55602c
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    img {
+      width: 75%;
+      height: 75%;
+    }
+
+    .language-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
     }
   }
 }

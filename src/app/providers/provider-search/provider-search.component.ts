@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {ProviderSearchForm} from "../interfaces/provider-search-form.interface";
 import {MatSnackBar} from "@angular/material/snack-bar";
@@ -8,7 +8,7 @@ import {ProviderSearchInterface} from "../interfaces/provider-search-interface.i
 @Component({
   selector: 'app-provider-search',
   templateUrl: './provider-search.component.html',
-  styleUrls: ['./provider-search.component.css']
+  styleUrls: ['./provider-search.component.scss']
 })
 export class ProviderSearchComponent {
   providerSearchForm = new FormGroup(<ProviderSearchForm>{
@@ -26,6 +26,8 @@ export class ProviderSearchComponent {
       ])),
     hasHealthInsurance: new FormControl<boolean | null>(null, Validators.required)
   })
+
+  isCollapsed = false;
 
   constructor(
     private snackBar: MatSnackBar,
@@ -45,8 +47,18 @@ export class ProviderSearchComponent {
     })
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: { target: { innerWidth: any; }; }) {
+    if (this.isCollapsed && event.target.innerWidth > 900) {
+      this.isCollapsed = false;
+    }
+  }
+
   onSearch(): void {
     if (this.providerSearchForm.valid) {
+      if (window.innerWidth < 900) {
+        this.isCollapsed = true;
+      }
       this.providersService.updateHealthcareProviders(this.providerSearchForm.value as ProviderSearchInterface);
     } else {
       this.snackBar.open('Invalid Form', 'Close', {duration: 3000});

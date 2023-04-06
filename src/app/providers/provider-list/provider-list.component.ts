@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
 import {HealthcareProvider} from "../interfaces/healthcare-provider.interface";
 import {ProvidersService} from "../providers.service";
 import {MatTableDataSource} from "@angular/material/table";
@@ -9,11 +9,11 @@ import {MatSort} from "@angular/material/sort";
 @Component({
   selector: 'app-provider-list',
   templateUrl: './provider-list.component.html',
-  styleUrls: ['./provider-list.component.css']
+  styleUrls: ['./provider-list.component.scss']
 })
-export class ProviderListComponent {
+export class ProviderListComponent implements OnInit {
 
-  displayedColumns = ["name", "description", "url", "zipcode"];
+  displayedColumns = [''];
 
   healthcareProvidersAsMatTableDataSource$: Observable<MatTableDataSource<HealthcareProvider>> =
     this.providersService.getHealthcareProviders().pipe(
@@ -24,7 +24,16 @@ export class ProviderListComponent {
       })
     );
 
+  windowSize = window.innerWidth;
+
   private dataSource = new MatTableDataSource<HealthcareProvider>([]);
+
+  constructor(public providersService: ProvidersService) {
+  }
+
+  ngOnInit() {
+    this.setColumns();
+  }
 
   @ViewChild('scheduledOrdersPaginator') set paginator(pager: MatPaginator) {
     if (pager) {
@@ -33,12 +42,23 @@ export class ProviderListComponent {
     }
   };
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: { target: { innerWidth: any; }; }) {
+    this.windowSize = event.target.innerWidth;
+    this.setColumns();
+  }
+
   @ViewChild(MatSort) set sort(sorter: MatSort) {
     if (sorter) {
       this.dataSource.sort = sorter;
     }
   }
 
-  constructor(public providersService: ProvidersService) {
+  private setColumns() {
+    if (this.windowSize > 900) {
+      this.displayedColumns = ["name", "description", "url", "zipcode"]
+    } else {
+      this.displayedColumns = ["name", "description", "zipcode"]
+    }
   }
 }

@@ -6,7 +6,7 @@ import { EmailResultsComponent } from "./email-results/email-results.component";
 @Component({
   selector: 'app-provider-footer',
   templateUrl: './provider-footer.component.html',
-  styleUrls: ['./provider-footer.component.css']
+  styleUrls: ['./provider-footer.component.scss']
 })
 export class ProviderFooterComponent {
   // TODO: make selector for other language versions

@@ -1,0 +1,30 @@
+.input-form {
+  display: flex;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+.health-insurance-input {
+  width: 18rem;
+}
+
+.search-button {
+  height: 2.5rem;
+  margin-top: .45rem;
+}
+
+@media screen and (max-width: 900px) {
+  .input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .search-button {
+    margin-top: 0;
+  }
+
+  .new-search-button {
+    margin-top: 1rem;
+  }
+}
