@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="4518631066079030754" datatype="html">
+        <source>Contact Us</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-footer/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Title text for form to message website administrator</note>
+        <note priority="1" from="meaning">form header</note>
+      </trans-unit>
+      <trans-unit id="3994164706830191416" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-footer/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">User&apos;s name</note>
+        <note priority="1" from="meaning">input field</note>
+      </trans-unit>
+      <trans-unit id="5070503347821530291" datatype="html">
+        <source>Email Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-footer/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-footer/email-results/email-results.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">User&apos;s email address</note>
+        <note priority="1" from="meaning">input field</note>
+      </trans-unit>
+      <trans-unit id="2477206310471272205" datatype="html">
+        <source>Phone Number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-footer/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">User&apos;s phone number</note>
+        <note priority="1" from="meaning">input field</note>
+      </trans-unit>
+      <trans-unit id="1464843745457979788" datatype="html">
+        <source>Organization</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-footer/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">The organization the user represents</note>
+        <note priority="1" from="meaning">input field</note>
+      </trans-unit>
+      <trans-unit id="2221314730147652631" datatype="html">
+        <source>Message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-footer/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">User&apos;s message for website administrator</note>
+        <note priority="1" from="meaning">input field</note>
+      </trans-unit>
+      <trans-unit id="1938501814492287169" datatype="html">
+        <source>Thanks for using HealthcAR!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-footer/email-results/email-results.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Thank the user for using this website</note>
+      </trans-unit>
+      <trans-unit id="5890799020053117223" datatype="html">
+        <source> If you&apos;d like a copy of these resources, please enter your email below. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-footer/email-results/email-results.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+        <note priority="1" from="description">Politely explain user can enter their email address below this text to receive the current list of healthcare resources</note>
+      </trans-unit>
+      <trans-unit id="1987503418061630841" datatype="html">
+        <source> Email Results <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon aria-hidden=&quot;true&quot;&gt;"/>mail<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-footer/provider-footer.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+        <note priority="1" from="description">Email results to the user</note>
+        <note priority="1" from="meaning">modal pop-up button</note>
+      </trans-unit>
+      <trans-unit id="5318626097073919824" datatype="html">
+        <source> Add Missing Provider <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon aria-hidden=&quot;true&quot;&gt;"/>medical_information<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-footer/provider-footer.component.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+        <note priority="1" from="description">Contact website administrator to add a missing healthcare provider</note>
+        <note priority="1" from="meaning">modal pop-up button</note>
+      </trans-unit>
+      <trans-unit id="8298700523241126259" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-list/provider-list.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Names of clinics</note>
+        <note priority="1" from="meaning">table header</note>
+      </trans-unit>
+      <trans-unit id="198266740028576177" datatype="html">
+        <source>Description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-list/provider-list.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Descriptions of clinics</note>
+        <note priority="1" from="meaning">table header</note>
+      </trans-unit>
+      <trans-unit id="4366525546612439701" datatype="html">
+        <source>URL</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-list/provider-list.component.html</context>
+          <context context-type="linenumber">21,20</context>
+        </context-group>
+        <note priority="1" from="description">URLs of clinics</note>
+        <note priority="1" from="meaning">table header</note>
+      </trans-unit>
+      <trans-unit id="8786292010197858555" datatype="html">
+        <source>ZIP Code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-list/provider-list.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Postal codes of Clinics</note>
+        <note priority="1" from="meaning">table header</note>
+      </trans-unit>
+      <trans-unit id="7615077314047969552" datatype="html">
+        <source>Select page of healthcare providers</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-list/provider-list.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3854478516787676309" datatype="html">
+        <source> New Search <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon aria-hidden=&quot;true&quot;&gt;"/>search<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-search/provider-search.component.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
+        <note priority="1" from="description">Allows user to re-enter data and perform another search</note>
+        <note priority="1" from="meaning">new search button</note>
+      </trans-unit>
+      <trans-unit id="5663345379872518386" datatype="html">
+        <source>How old are you?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-search/provider-search.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Ask for user&apos;s age</note>
+        <note priority="1" from="meaning">input field</note>
+      </trans-unit>
+      <trans-unit id="2584454273389989709" datatype="html">
+        <source>What is your Zip Code?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-search/provider-search.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Ask for user&apos;s zip code</note>
+        <note priority="1" from="meaning">input field</note>
+      </trans-unit>
+      <trans-unit id="6488226902586442118" datatype="html">
+        <source>Do you have Health Insurance?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-search/provider-search.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Ask whether user has health insurance</note>
+        <note priority="1" from="meaning">input field</note>
+      </trans-unit>
+      <trans-unit id="3816938423816349497" datatype="html">
+        <source> Search <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon aria-hidden=&quot;true&quot;&gt;"/>search<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/provider-search/provider-search.component.html</context>
+          <context context-type="linenumber">30,32</context>
+        </context-group>
+        <note priority="1" from="description">Search for results that match data entered in form</note>
+        <note priority="1" from="meaning">search button</note>
+      </trans-unit>
+      <trans-unit id="3243993190188918305" datatype="html">
+        <source>Invalid Search Terms</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/providers.service.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">One or more required search terms are wrong</note>
+        <note priority="1" from="meaning">toast message</note>
+      </trans-unit>
+      <trans-unit id="7111946162713368708" datatype="html">
+        <source>Invalid Form</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/providers.service.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">One or more required inputs are wrong</note>
+        <note priority="1" from="meaning">toast message</note>
+      </trans-unit>
+      <trans-unit id="5299416626292789543" datatype="html">
+        <source>Invalid Email Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/providers.service.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Required email address input is wrong</note>
+        <note priority="1" from="meaning">toast message</note>
+      </trans-unit>
+      <trans-unit id="2779301620360095058" datatype="html">
+        <source>Message Failed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/providers.service.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">Message has failed to send</note>
+        <note priority="1" from="meaning">toast message</note>
+      </trans-unit>
+      <trans-unit id="7421761478092459916" datatype="html">
+        <source>Message Sent</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/providers.service.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Message has successfully sent</note>
+        <note priority="1" from="meaning">toast message</note>
+      </trans-unit>
+      <trans-unit id="505927999700634978" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/providers/providers.service.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Close notification</note>
+        <note priority="1" from="meaning">toast message</note>
+      </trans-unit>
+      <trans-unit id="1173196774764505544" datatype="html">
+        <source>HealthcAR Logo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/splash/splash.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2568199381976524079" datatype="html">
+        <source> We are an <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Arkansas based<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> healthcare database. Our goal is to provide users with <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>free and low-cost<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> resources for healthcare information and services. We value <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>patient privacy<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> and collect zero data on patient needs or demographics. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/splash/splash.component.html</context>
+          <context context-type="linenumber">18,22</context>
+        </context-group>
+        <note priority="1" from="description">Splash screen website description</note>
+        <note priority="1" from="meaning">website/org description</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

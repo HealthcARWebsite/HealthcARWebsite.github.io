@@ -12,12 +12,12 @@ import { EmailSearchResultsInterface } from "./interfaces/email-results-interfac
 export class ProvidersService {
 
   public static readonly snackBarMessages = {
-    InvalidSearchTerms: $localize`:meaning|description:Invalid Search Terms`,
-    InvalidForm: $localize`Invalid Form`,
-    InvalidEmail: $localize`Invalid Email Address`,
-    MessageFailed: $localize`Message Failed`,
-    MessageSent: $localize`Message Sent`,
-    Close: $localize`Close`
+    InvalidSearchTerms: $localize`:toast message|One or more required search terms are wrong:Invalid Search Terms`,
+    InvalidForm: $localize`:toast message|One or more required inputs are wrong:Invalid Form`,
+    InvalidEmail: $localize`:toast message|Required email address input is wrong:Invalid Email Address`,
+    MessageFailed: $localize`:toast message|Message has failed to send:Message Failed`,
+    MessageSent: $localize`:toast message|Message has successfully sent:Message Sent`,
+    Close: $localize`:toast message|Close notification:Close`
   }
 
   isTableLoading = false;
