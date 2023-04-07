@@ -1,9 +1,9 @@
-import {Component, HostListener} from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {ProviderSearchForm} from "../interfaces/provider-search-form.interface";
-import {MatSnackBar} from "@angular/material/snack-bar";
-import {ProvidersService} from "../providers.service";
-import {ProviderSearchInterface} from "../interfaces/provider-search-interface.interface";
+import { Component, HostListener } from '@angular/core';
+import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { ProviderSearchForm } from "../interfaces/provider-search-form.interface";
+import { MatSnackBar } from "@angular/material/snack-bar";
+import { ProvidersService } from "../providers.service";
+import { ProviderSearchInterface } from "../interfaces/provider-search-interface.interface";
 
 @Component({
   selector: 'app-provider-search',
@@ -61,7 +61,8 @@ export class ProviderSearchComponent {
       }
       this.providersService.updateHealthcareProviders(this.providerSearchForm.value as ProviderSearchInterface);
     } else {
-      this.snackBar.open('Invalid Form', 'Close', {duration: 3000});
+      this.snackBar.open(ProvidersService.snackBarMessages.InvalidForm,
+        ProvidersService.snackBarMessages.Close, {duration: 3000});
     }
   }
 }

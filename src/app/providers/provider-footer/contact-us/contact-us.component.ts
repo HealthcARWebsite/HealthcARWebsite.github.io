@@ -35,13 +35,16 @@ export class ContactUsComponent {
       this.providersService.contactUs(this.contactForm.value as ContactUsInterface).subscribe({
         error: (e) => {
           console.error(e);
-          this.snackBar.open('Message Failed', 'Close', {duration: 3000});
+          this.snackBar.open(ProvidersService.snackBarMessages.MessageFailed,
+            ProvidersService.snackBarMessages.Close, {duration: 3000});
         },
-        complete: () => this.snackBar.open('Message Sent', 'Close', {duration: 3000})
-      })
+        complete: () => this.snackBar.open(ProvidersService.snackBarMessages.MessageSent,
+          ProvidersService.snackBarMessages.Close, {duration: 3000})
+      });
       this.dialogRef.close();
     } else {
-      this.snackBar.open('Invalid Form', 'Close', {duration: 3000});
+      this.snackBar.open(ProvidersService.snackBarMessages.InvalidForm,
+        ProvidersService.snackBarMessages.Close, {duration: 3000});
     }
   }
 }

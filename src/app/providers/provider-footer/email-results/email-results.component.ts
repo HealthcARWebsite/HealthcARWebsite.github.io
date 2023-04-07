@@ -33,17 +33,22 @@ export class EmailResultsComponent {
       this.providersService.emailSearchResults(this.emailForm.value as string).subscribe({
         error: (e) => {
           console.error(e);
-          this.snackBar.open('Message Failed', 'Close', {duration: 3000});
+          this.snackBar.open(ProvidersService.snackBarMessages.MessageFailed,
+            ProvidersService.snackBarMessages.Close, {duration: 3000});
         },
-        complete: () => this.snackBar.open('Message Sent', 'Close', {duration: 3000})
+        complete: () => this.snackBar.open(ProvidersService.snackBarMessages.MessageSent,
+          ProvidersService.snackBarMessages.Close, {duration: 3000})
       })
       this.dialogRef.close();
     } else if (!this.providersService.isSearchFormValid) {
-      this.snackBar.open('Invalid Search Terms', 'Close', {duration: 3000});
+      this.snackBar.open(ProvidersService.snackBarMessages.InvalidSearchTerms,
+        ProvidersService.snackBarMessages.Close, {duration: 3000});
     } else if (!this.emailForm.valid) {
-      this.snackBar.open('Invalid Email', 'Close', {duration: 3000});
+      this.snackBar.open(ProvidersService.snackBarMessages.InvalidEmail,
+        ProvidersService.snackBarMessages.Close, {duration: 3000});
     } else {
-      this.snackBar.open('Invalid Form', 'Close', {duration: 3000});
+      this.snackBar.open(ProvidersService.snackBarMessages.InvalidForm,
+        ProvidersService.snackBarMessages.Close, {duration: 3000});
     }
   }
 }
