@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Test Clinic",
+    "description": "Pulse check 1, 2",
+    "url": "https://www.walgreens.com/",
+    "zipCode": "72758"
+  },
+  {
+    "name": "Bone Doctor",
+    "description": "Dr. Skeleton Rattles",
+    "url": "https://en.wikipedia.org/wiki/Skeleton",
+    "zipCode": "72703"
+  },
+  {
+    "name": "Mental Health R Us",
+    "description": "Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah",
+    "url": "https://988lifeline.org/",
+    "zipCode": "72002"
+  }
+]

@@ -7,8 +7,14 @@
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {
-          "es": "src/locale/messages.es.xlf",
-          "mh": "src/locale/messages.mh.xlf"
+          "es": {
+            "translation": "src/locale/messages.es.xlf",
+            "baseHref": "es"
+          },
+          "mh": {
+            "translation": "src/locale/messages.mh.xlf",
+            "baseHref": "mh"
+          }
         }
       },
       "projectType": "application",
@@ -20,7 +26,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -38,6 +44,12 @@
             "scripts": []
           },
           "configurations": {
+            "production-localize": {
+              "localize": [
+                "en-US"
+              ],
+              "deleteOutputPath": false
+            },
             "production": {
               "budgets": [
                 {
@@ -61,6 +73,11 @@
               "sourceMap": true,
               "namedChunks": true
             },
+            "en-US": {
+              "localize": [
+                "en"
+              ]
+            },
             "es": {
               "localize": [
                 "es"
@@ -82,6 +99,9 @@
             },
             "development": {
               "browserTarget": "HealthcAR:build:development"
+            },
+            "en-US": {
+              "browserTarget": "HealthcAR:build:en-US"
             },
             "es": {
               "browserTarget": "HealthcAR:build:es"

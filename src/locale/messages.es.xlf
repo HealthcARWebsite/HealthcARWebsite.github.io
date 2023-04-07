@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template" target-language="es">
     <body>
       <trans-unit id="4518631066079030754" datatype="html">
         <source>Contact Us</source>
@@ -13,11 +13,12 @@
       </trans-unit>
       <trans-unit id="3994164706830191416" datatype="html">
         <source>Name</source>
+        <target state="translated">Nombre</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/providers/provider-footer/contact-us/contact-us.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
-        <note priority="1" from="description">User&apos;s name</note>
+        <note priority="1" from="description">User's name</note>
         <note priority="1" from="meaning">input field</note>
       </trans-unit>
       <trans-unit id="5070503347821530291" datatype="html">
@@ -30,7 +31,7 @@
           <context context-type="sourcefile">src/app/providers/provider-footer/email-results/email-results.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
-        <note priority="1" from="description">User&apos;s email address</note>
+        <note priority="1" from="description">User's email address</note>
         <note priority="1" from="meaning">input field</note>
       </trans-unit>
       <trans-unit id="2477206310471272205" datatype="html">
@@ -39,7 +40,7 @@
           <context context-type="sourcefile">src/app/providers/provider-footer/contact-us/contact-us.component.html</context>
           <context context-type="linenumber">15</context>
         </context-group>
-        <note priority="1" from="description">User&apos;s phone number</note>
+        <note priority="1" from="description">User's phone number</note>
         <note priority="1" from="meaning">input field</note>
       </trans-unit>
       <trans-unit id="1464843745457979788" datatype="html">
@@ -57,7 +58,7 @@
           <context context-type="sourcefile">src/app/providers/provider-footer/contact-us/contact-us.component.html</context>
           <context context-type="linenumber">25</context>
         </context-group>
-        <note priority="1" from="description">User&apos;s message for website administrator</note>
+        <note priority="1" from="description">User's message for website administrator</note>
         <note priority="1" from="meaning">input field</note>
       </trans-unit>
       <trans-unit id="1938501814492287169" datatype="html">
@@ -69,7 +70,7 @@
         <note priority="1" from="description">Thank the user for using this website</note>
       </trans-unit>
       <trans-unit id="5890799020053117223" datatype="html">
-        <source> If you&apos;d like a copy of these resources, please enter your email below. </source>
+        <source> If you'd like a copy of these resources, please enter your email below. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/providers/provider-footer/email-results/email-results.component.html</context>
           <context context-type="linenumber">6,8</context>
@@ -77,7 +78,7 @@
         <note priority="1" from="description">Politely explain user can enter their email address below this text to receive the current list of healthcare resources</note>
       </trans-unit>
       <trans-unit id="1987503418061630841" datatype="html">
-        <source> Email Results <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon aria-hidden=&quot;true&quot;&gt;"/>mail<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/></source>
+        <source> Email Results <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon aria-hidden=&quot;true&quot;>"/>mail<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/providers/provider-footer/provider-footer.component.html</context>
           <context context-type="linenumber">4,6</context>
@@ -86,7 +87,7 @@
         <note priority="1" from="meaning">modal pop-up button</note>
       </trans-unit>
       <trans-unit id="5318626097073919824" datatype="html">
-        <source> Add Missing Provider <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon aria-hidden=&quot;true&quot;&gt;"/>medical_information<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/></source>
+        <source> Add Missing Provider <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon aria-hidden=&quot;true&quot;>"/>medical_information<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/providers/provider-footer/provider-footer.component.html</context>
           <context context-type="linenumber">10,12</context>
@@ -138,7 +139,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="3854478516787676309" datatype="html">
-        <source> New Search <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon aria-hidden=&quot;true&quot;&gt;"/>search<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/></source>
+        <source> New Search <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon aria-hidden=&quot;true&quot;>"/>search<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/providers/provider-search/provider-search.component.html</context>
           <context context-type="linenumber">2,4</context>
@@ -152,7 +153,7 @@
           <context context-type="sourcefile">src/app/providers/provider-search/provider-search.component.html</context>
           <context context-type="linenumber">11</context>
         </context-group>
-        <note priority="1" from="description">Ask for user&apos;s age</note>
+        <note priority="1" from="description">Ask for user's age</note>
         <note priority="1" from="meaning">input field</note>
       </trans-unit>
       <trans-unit id="2584454273389989709" datatype="html">
@@ -161,7 +162,7 @@
           <context context-type="sourcefile">src/app/providers/provider-search/provider-search.component.html</context>
           <context context-type="linenumber">16</context>
         </context-group>
-        <note priority="1" from="description">Ask for user&apos;s zip code</note>
+        <note priority="1" from="description">Ask for user's zip code</note>
         <note priority="1" from="meaning">input field</note>
       </trans-unit>
       <trans-unit id="6488226902586442118" datatype="html">
@@ -174,7 +175,7 @@
         <note priority="1" from="meaning">input field</note>
       </trans-unit>
       <trans-unit id="3816938423816349497" datatype="html">
-        <source> Search <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon aria-hidden=&quot;true&quot;&gt;"/>search<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/></source>
+        <source> Search <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon aria-hidden=&quot;true&quot;>"/>search<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon>"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/providers/provider-search/provider-search.component.html</context>
           <context context-type="linenumber">30,32</context>
@@ -244,7 +245,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="2568199381976524079" datatype="html">
-        <source> We are an <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Arkansas based<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> healthcare database. Our goal is to provide users with <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>free and low-cost<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> resources for healthcare information and services. We value <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>patient privacy<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> and collect zero data on patient needs or demographics. </source>
+        <source> We are an <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>Arkansas based<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> healthcare database. Our goal is to provide users with <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>free and low-cost<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> resources for healthcare information and services. We value <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>patient privacy<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> and collect zero data on patient needs or demographics. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/splash/splash.component.html</context>
           <context context-type="linenumber">18,22</context>
