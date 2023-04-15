@@ -9,7 +9,7 @@
     "test": "ng test",
     "build-github": "ng build --output-path docs --base-href https://HealthcARWebsite.github.io/",
     "build-localized": "ng build --configuration=production-localize",
-    "heroku-postbuild": "ng build"
+    "heroku-postbuild": "npm run build-localized"
   },
   "private": true,
   "dependencies": {
