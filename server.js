@@ -18,7 +18,7 @@ function app() {
   const languages = ['en', 'es', 'mh'];
 
   languages.forEach((locale) => {
-    const appServerModule = require(path.join(__dirname + '/dist' + locale));
+    const appServerModule = require(path.join(__dirname , locale, '/dist'));
     server.use(`/${locale}`, appServerModule.app(locale));
   });
 
