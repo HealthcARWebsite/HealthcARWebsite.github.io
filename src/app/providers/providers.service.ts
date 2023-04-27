@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
-import { HealthcareProvider } from "./interfaces/healthcare-provider.interface";
-import { BehaviorSubject, Observable } from "rxjs";
-import { ContactUsInterface } from "./interfaces/contact-us-interface.interface";
-import { ProviderSearchInterface } from "./interfaces/provider-search-interface.interface";
-import { EmailSearchResultsInterface } from "./interfaces/email-results-interface.interface";
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HealthcareProvider} from "./interfaces/healthcare-provider.interface";
+import {BehaviorSubject, Observable} from "rxjs";
+import {ContactUsInterface} from "./interfaces/contact-us-interface.interface";
+import {ProviderSearchInterface} from "./interfaces/provider-search-interface.interface";
+import {EmailSearchResultsInterface} from "./interfaces/email-results-interface.interface";
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +19,8 @@ export class ProvidersService {
     MessageSent: $localize`:toast message|Message has successfully sent:Message Sent`,
     Close: $localize`:toast message|Close notification:Close`
   }
+
+  readonly #headers = new HttpHeaders({'Accept-Language': this.#setAcceptLanguage()})
 
   isTableLoading = false;
 
@@ -40,7 +42,10 @@ export class ProvidersService {
   updateHealthcareProviders(formData: ProviderSearchInterface) {
     this.isTableLoading = true;
     const url = `${this.#baseUrl}/providers/get-providers`;
-    this.http.get<HealthcareProvider[]>(url, {params: formData as any})
+    this.http.get<HealthcareProvider[]>(url, {
+      headers: this.#headers,
+      params: formData as any
+    })
       .subscribe({
           next: (result) => {
             this.isTableLoading = false;
@@ -64,6 +69,15 @@ export class ProvidersService {
   emailSearchResults(formData: string): Observable<any> {
     const url = `${this.#baseUrl}/providers/email`;
     this.emailSearchResultsFormData.emailAddress = formData;
-    return this.http.post<any>(url, this.emailSearchResultsFormData);
+    return this.http.post<any>(url, this.emailSearchResultsFormData, {headers: this.#headers});
+  }
+
+  #setAcceptLanguage() {
+    const currentLanguage = location.pathname.slice(1, 3);
+    if (currentLanguage === 'es' || currentLanguage === 'mh') {
+      return currentLanguage;
+    } else {
+      return 'en'
+    }
   }
 }

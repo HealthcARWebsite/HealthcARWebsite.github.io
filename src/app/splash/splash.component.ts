@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Router } from "@angular/router";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-splash',
@@ -7,11 +6,7 @@ import { Router } from "@angular/router";
   styleUrls: ['./splash.component.scss']
 })
 export class SplashComponent {
-  constructor(private readonly router:Router) {
-  }
-
-  goToProviders(languageCode: string): void{
-    console.log(languageCode) //TODO: make links to localized version
-    void this.router.navigate(['/providers'])
+  goToProviders(languageCode: string) {
+    window.open(`https://HealthcARWebsite.github.io/${languageCode}/providers`, "_self")
   }
 }
